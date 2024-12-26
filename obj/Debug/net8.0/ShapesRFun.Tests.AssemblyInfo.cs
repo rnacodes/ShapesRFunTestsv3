@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShapesRFun.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1e475de7d00760f7447a9f08c26335a09755cae")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShapesRFun.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShapesRFun.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

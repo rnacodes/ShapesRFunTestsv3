@@ -9,7 +9,8 @@
       "ShapesRFun/1.0.0": {
         "dependencies": {
           "Moq": "4.20.72",
-          "Moq.AutoMock": "3.5.0"
+          "Moq.AutoMock": "3.5.0",
+          "xunit.runner.visualstudio": "3.0.0"
         },
         "runtime": {
           "ShapesRFun.dll": {}
@@ -94,7 +95,8 @@
         "dependencies": {
           "System.Runtime": "4.3.0"
         }
-      }
+      },
+      "xunit.runner.visualstudio/3.0.0": {}
     }
   },
   "libraries": {
@@ -165,6 +167,13 @@
       "sha512": "sha512-rcnXA1U9W3QUtMSGoyoNHH6w4V5Rxa/EKXmzpORUYlDAlDB34hIQoU57ATXl8xHa83VvzRm6PcElEizgUd7U5w==",
       "path": "system.runtime.compilerservices.unsafe/4.3.0",
       "hashPath": "system.runtime.compilerservices.unsafe.4.3.0.nupkg.sha512"
+    },
+    "xunit.runner.visualstudio/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HggUqjQJe8PtDxcP25Q+CnR6Lz4oX3GElhD9V4oU2+75x9HI6A6sxbfKGS4UwU4t4yJaS9fBmAuriz8bQApNjw==",
+      "path": "xunit.runner.visualstudio/3.0.0",
+      "hashPath": "xunit.runner.visualstudio.3.0.0.nupkg.sha512"
     }
   }
 }
