@@ -4,11 +4,10 @@ using ShapesRFun.Bases;
 
 
 namespace ShapesRFun.Tests;
-public class SquareTests
+public class SquareTestsPartOne
 {
-
     [Fact]
-    public void SquareAreaTest()
+    public void SquareAreaTests1()
     {
         // Arrange
         int dimension = 5;
@@ -24,7 +23,7 @@ public class SquareTests
     }
 
     [Fact]
-    public void SquareDoubleAreaTest()
+    public void SquareDoubleAreaTest1()
     {
         // Arrange
         int dimension = 5;
@@ -38,10 +37,10 @@ public class SquareTests
 
 }
 
-public class CircleTests
+public class CircleTestsPartOne 
 {
     [Fact]
-    public void CircleAreaTest()
+    public void CircleAreaTest1() 
     {
         //Arrange
         int dimension = 10;
@@ -56,7 +55,7 @@ public class CircleTests
     }
 
     [Fact]
-    public void CirclePerimeterTest()
+    public void CirclePerimeterTest1()
     {
 
         //Arrange
@@ -72,7 +71,7 @@ public class CircleTests
     }
 
 
-    public class AddShapesTest
+    public class AddShapesTest1
     {
 
         //XUnit test for AddShapesHere
@@ -92,45 +91,55 @@ public class CircleTests
 
 
         // More complicated tests coming soon!
-         
+
         //Moq test for AddShapesHere
         //[Fact]
+    }
 
+    public class AddShapesTest2 { 
         [Fact]
         public void AddShapesHere_AddTwoSimpleShapes()
         {
             //Arrange - setting up the mock shapes and class to add their areas
-            var mockSimpleShape1 = new Mock<ShapeBase>(); //Indicate what is going to be mocked.
-            var mockSimpleShape2 = new Mock<ShapeBase>();
+            var mockSimpleShape1 = new Mock<Circle>(); //Indicate what is going to be mocked.
+            var mockSimpleShape2 = new Mock<Square>();
 
             mockSimpleShape1.Setup(m => m.GetArea()).Returns(10); //Is this creating a shape such that when you use GetArea, it returns 10?
             mockSimpleShape2.Setup(m => m.GetArea()).Returns(5);
 
+            int mockArea1 = mockSimpleShape1.Object.GetArea();
+            int mockArea2 = mockSimpleShape2.Object.GetArea();
+
             //Instantiation of AddShapes class
             var addShapesMock = new AddShapes();
 
-            //var addShapesAreaMock = addShapesMock.AddShapesHere(mockSimpleShape1.Object, mockSimpleShape2.Object);
+            var addShapesAreaMock = addShapesMock.AddShapesHere(mockArea1, mockArea2);
 
         }
-
-        void ICalculateAreaClassTest1()
-        {
-
-            //Create mock instantiantion of GetAreaClass with specific answer?
-            var letsTestGetAreaClass = new Mock<ICalculateArea>();
-            letsTestGetAreaClass.Setup(m => m.GetArea()).Returns(26);
-
-            //Testing GetArea
-            var testArea = letsTestGetAreaClass.Object.GetArea();
-
-            Assert.Equal(26, testArea);
-            letsTestGetAreaClass.Verify(m => m.GetArea(), Times.Once);
-
-        }
-        
     }
 
+    //Tests for shape specific methods
+
+    /*
+    void ICalculateAreaClassTest1()
+    {
+
+        //Create mock instantiantion of GetAreaClass with specific answer?
+        var letsTestGetAreaClass = new Mock<ICalculateArea>();
+        letsTestGetAreaClass.Setup(m => m.GetArea()).Returns(26);
+
+        //Testing GetArea
+        var testArea = letsTestGetAreaClass.Object.GetArea();
+
+        Assert.Equal(26, testArea);
+        letsTestGetAreaClass.Verify(m => m.GetArea(), Times.Once);
+
+    }
+    */
+
 }
+
+
     
 
 
