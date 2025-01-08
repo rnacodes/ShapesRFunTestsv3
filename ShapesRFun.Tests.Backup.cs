@@ -1,6 +1,8 @@
 ﻿using Moq;
 namespace ShapesRFun.Tests;
 
+/* Backup for all shape tests
+ 
 //xUnit test for Square GetArea and DoubleArea
 public class SquareTestsPartOne
 {
@@ -45,6 +47,8 @@ public class SquareTestsPartOne
         Assert.Equal(expectedArea, actualArea);
     }
 }
+
+
 
 public class CircleTestsPartOne 
 {
@@ -141,14 +145,14 @@ public class CircleTestsPartOne
         [Fact]
 
         public void TriangleSpecialJokeTest
-*/
+
 
 
     //Tests for Shape Special methods
 
 
 
-    /*
+    
     void ICalculateAreaClassTest1()
     {
 
@@ -163,13 +167,12 @@ public class CircleTestsPartOne
         letsTestGetAreaClass.Verify(m => m.GetArea(), Times.Once);
 
     }
-    */
+    
 
 }
 
-
     
-
+*/
 
 
 
