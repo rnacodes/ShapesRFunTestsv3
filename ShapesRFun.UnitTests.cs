@@ -1,9 +1,7 @@
 ﻿using Moq;
-using ShapesRFun.Bases;
-
-
-
 namespace ShapesRFun.Tests;
+
+//xUnit test for Square GetArea and DoubleArea
 public class SquareTestsPartOne
 {
     [Fact]
@@ -35,6 +33,17 @@ public class SquareTestsPartOne
         Assert.Equal(expectedArea, actualArea);
     }
 
+    [Fact]
+    public void SquareHalveAreaTest1()
+    {
+        int dimension = 4;
+        int expectedArea = 8;
+        var square = new Square { Dimension = dimension };
+
+        var actualArea = square.HalveArea();
+
+        Assert.Equal(expectedArea, actualArea);
+    }
 }
 
 public class CircleTestsPartOne 
@@ -73,8 +82,7 @@ public class CircleTestsPartOne
 
     public class AddShapesTest1
     {
-
-        //XUnit test for AddShapesHere
+        //xUnit test for AddShapesHere
         [Fact]
         public void AddShapesHereTest()
         {
@@ -88,14 +96,9 @@ public class CircleTestsPartOne
             // Assert
             Assert.Equal(expectedArea, actualArea);
         }
-
-
-        // More complicated tests coming soon!
-
-        //Moq test for AddShapesHere
-        //[Fact]
     }
 
+    //Moq test for AddShapesHere
     public class AddShapesTest2 { 
         [Fact]
         public void AddShapesHere_AddTwoSimpleShapes()
@@ -118,7 +121,32 @@ public class CircleTestsPartOne
         }
     }
 
-    //Tests for shape specific methods
+    //Moq tests are not needed for static methods
+
+    public class ShapesFunTricksTest {
+    
+        [Fact]
+        public void RectangleMagicNumberTest()
+        {
+            //Arrange
+            string expectedRectangleMagicNumber = "The answer to all questions is 42.";
+            //Act
+            string actualRectangleMagicNumber = Rectangle.RectangleMagicNumber();
+            //Assert
+            Assert.Equal(expectedRectangleMagicNumber, actualRectangleMagicNumber);
+        }
+    }
+
+    /* Triangle Special Joke test will go here
+        [Fact]
+
+        public void TriangleSpecialJokeTest
+*/
+
+
+    //Tests for Shape Special methods
+
+
 
     /*
     void ICalculateAreaClassTest1()
