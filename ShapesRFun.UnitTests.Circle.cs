@@ -37,6 +37,24 @@ public class CircleTestsPartOne
     }
 }
 
+//Moq tests for Circle GetArea and GetPerimeter
+public class CircleTests2()
+{
+    [Fact]
+    public void CircleGetArea_ShouldReturnProperValue_WhenMethodIsCalled()
+    {
+        //Arrange
+        var mockCircle = new Mock<Circle>();
+        mockCircle.Setup(m => m.GetArea()).Returns(500);
+        //Act
+        var actualArea = mockCircle.Object.GetArea();
+        //Assert
+        Assert.Equal(500, actualArea);
+        //Verify
+        mockCircle.Verify(m => m.GetArea(), Times.Once);
+    }
+}
+
 
 
 

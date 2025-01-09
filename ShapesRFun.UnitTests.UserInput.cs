@@ -2,7 +2,6 @@
 using Moq;
 namespace ShapesRFun.Tests;
 
-//xUnit test for user input - created
 public class UserInputForShape1
 {
     //Moq test for user input

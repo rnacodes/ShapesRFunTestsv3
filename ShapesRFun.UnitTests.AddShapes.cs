@@ -31,6 +31,7 @@ namespace ShapesRFun.Tests;
             mockSimpleShape1.Setup(m => m.GetArea()).Returns(10); //Is this creating a shape such that when you use GetArea, it returns 10?
             mockSimpleShape2.Setup(m => m.GetArea()).Returns(5);
 
+            //Act? - Get the area of the mocked shapes
             int mockArea1 = mockSimpleShape1.Object.GetArea();
             int mockArea2 = mockSimpleShape2.Object.GetArea();
 
