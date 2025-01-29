@@ -157,7 +157,7 @@ public class CircleTestsPartOne
     {
 
         //Create mock instantiantion of GetAreaClass with specific answer?
-        var letsTestGetAreaClass = new Mock<ICalculateArea>();
+        var letsTestGetAreaClass = new Mock<IGetArea>();
         letsTestGetAreaClass.Setup(m => m.GetArea()).Returns(26);
 
         //Testing GetArea
